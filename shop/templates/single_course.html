@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} Course | {{ course.title }} {% endblock %}
+
+{% block content %}
+<table class="table table-dark table-hover mt-5 table-border table-striped">
+    <tbody>
+        <tr>
+            <td>Title</td>
+            <td>{{course.title}}</td>
+        </tr>
+        <tr>
+            <td>Category</td>
+            <td>{{course.category}}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{course.price}}</td>
+        </tr>
+        <tr>
+            <td>students quantity</td>
+            <td>{{course.students_qty}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button class="btn btn-outline-primary">Buy</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+{% endblock %}

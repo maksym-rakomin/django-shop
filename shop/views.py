@@ -7,9 +7,11 @@ from .models import Course, Category
 
 def index(request):
     courses = Course.objects.all()
-    # res = f"<ul>{
-    #     ''.join(['<li>' + str(course) + '</li>' for course in courses])
-    # }</ul>"
-    # return HttpResponse(res)
 
     return render(request, 'courses.html', {'courses': courses})
+
+
+def single_course(request, course_id):
+    course = Course.objects.get(pk=course_id)
+
+    return render(request, 'single_course.html', {'course': course})
