@@ -26,3 +26,6 @@ class CourseResource(ModelResource):
     def dehydrate(self, bundle):
         bundle.data['category_id'] = bundle.obj.category
         return bundle
+
+    def dehydrate_title(self, bundle):
+        return bundle.data['title'].upper()
